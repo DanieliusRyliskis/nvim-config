@@ -38,8 +38,11 @@ return require('packer').startup(function(use)
       'L3MON4D3/LuaSnip',
       requires = { 'rafamadriz/friendly-snippets' },
   }
+  use "saadparwaiz1/cmp_luasnip"
 
-
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use "rose-pine/neovim"
+  use "sainnhe/everforest"
   use {
 	  "0xstepit/flow.nvim",
 	  lazy = false,
@@ -79,9 +82,10 @@ return require('packer').startup(function(use)
 			  terminal_colors = true,
 		  }
 		  require("tokyodark").setup(opts)
-          vim.cmd [[colorscheme tokyodark]]
 	  end,
   }
+
+  use "rebelot/kanagawa.nvim"
 
   use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 

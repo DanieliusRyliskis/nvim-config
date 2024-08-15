@@ -1,8 +1,23 @@
 local cmp = require'cmp'
 local luasnip = require'luasnip'
-
-
+                        
+            
 cmp.setup({
+    -- completion = {
+    --     completeopt = 'menu,menuone,noselect',
+    --     keyword_length = 2, -- Start completion after 2 characters
+    -- },
+    -- performance = {
+    --     debounce = 100,  -- Add delay to reduce CPU load
+    --     throttle = 100,  -- Limit how often the completion suggestions are updated as you type
+    --     fetching_timeout = 200, -- Timeout for fetching completion items
+    --     confirm_resolve_timeout = 100,  -- Delay resolving completion items slightly
+    --     async_budget = 10,  -- Allow slightly more time for async functions per event loop step
+    --     max_view_entries = 5, -- Limit the number of items displayed in the completion menu
+    -- },
+    -- experimental = {
+    --     ghost_text = false, -- Disable ghost text for performance
+    -- },
     snippet = {
         -- REQUIRED - you must specify a snippet engine
         expand = function(args)
@@ -23,30 +38,30 @@ cmp.setup({
         ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         ["<Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_locally_jumpable() then
-            luasnip.expand_or_jump()
-          else
-            fallback()
-          end
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif luasnip.expand_or_locally_jumpable() then
+                luasnip.expand_or_jump()
+            else
+                fallback()
+            end
         end, { "i", "s" }),
         ["<S-Tab>"] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.locally_jumpable(-1) then
-            luasnip.jump(-1)
-          else
-            fallback()
-          end
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.locally_jumpable(-1) then
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
         end, { "i", "s" }),
-    }),
+    }),                                    
     sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
+        { name = 'nvim_lsp'},
         { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
     }, {
-        { name = 'buffer' },
+        { name = 'buffer'},
     })
 })
