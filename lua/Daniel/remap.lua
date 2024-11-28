@@ -41,7 +41,7 @@ keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 
 -- Insert --
 -- Press jk fast to enter
-keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "jk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -54,10 +54,11 @@ keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
 -- Vertical movement
-vim.api.nvim_set_keymap('n', '<C-d>', '<C-d>zz', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<C-u>', '<C-u>zz', { noremap = true, silent = true })
-
-
+keymap('n', '<C-d>', '<C-d>zz', opts)
+keymap('n', '<C-u>', '<C-u>zz', opts)
+-- Horizontal movements
+keymap('n', '<Right>', '5zl', opts)
+keymap('n', '<Left>', '5zh', opts)
 
 -- Visual Block --
 -- Move text up and down
@@ -78,3 +79,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Bbyea
 keymap("n", "<leader>q", ":Bdelete<CR>", opts)
+
+-- Formating
+
+keymap('n', '<F3>', ':!prettier --write %<CR>', { noremap = true, silent = true })

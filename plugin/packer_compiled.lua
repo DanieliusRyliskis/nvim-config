@@ -126,7 +126,7 @@ _G.packer_plugins = {
     url = "https://github.com/sainnhe/everforest"
   },
   ["flow.nvim"] = {
-    config = { "\27LJ\2\nt\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\15fluo_color\tpink\21aggressive_spell\1\tmode\vnormal\16transparent\2\nsetup\tflow\frequire\0" },
+    config = { "\27LJ\2\nt\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\16transparent\2\tmode\vnormal\15fluo_color\tpink\21aggressive_spell\1\nsetup\tflow\frequire\0" },
     loaded = true,
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/flow.nvim",
     url = "https://github.com/0xstepit/flow.nvim"
@@ -160,6 +160,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/daniel/.local/share/nvim/site/pack/packer/start/neovim",
     url = "https://github.com/rose-pine/neovim"
+  },
+  ["nvim-autopairs"] = {
+    config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
+    loaded = false,
+    needs_bufread = false,
+    only_cond = false,
+    path = "/home/daniel/.local/share/nvim/site/pack/packer/opt/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -220,18 +228,25 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: flow.nvim
-time([[Config for flow.nvim]], true)
-try_loadstring("\27LJ\2\nt\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\15fluo_color\tpink\21aggressive_spell\1\tmode\vnormal\16transparent\2\nsetup\tflow\frequire\0", "config", "flow.nvim")
-time([[Config for flow.nvim]], false)
--- Config for: tokyodark.nvim
-time([[Config for tokyodark.nvim]], true)
-try_loadstring("\27LJ\2\n\v\0\2\2\0\0\0\1L\0\2\0\v\0\1\1\0\0\0\1L\0\2\0•\3\1\0\4\0\18\0\0245\0\0\0005\1\2\0005\2\1\0=\2\3\0015\2\4\0=\2\5\0015\2\6\0=\2\a\0014\2\0\0=\2\b\0014\2\0\0=\2\t\1=\1\n\0003\1\v\0=\1\f\0003\1\r\0=\1\14\0006\1\15\0'\3\16\0B\1\2\0029\1\17\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\14tokyodark\frequire\19custom_palette\0\22custom_highlights\0\vstyles\14variables\14functions\16identifiers\1\0\1\vitalic\2\rkeywords\1\0\1\vitalic\2\rcomments\1\0\5\rcomments\0\rkeywords\0\16identifiers\0\14functions\0\14variables\0\1\0\1\vitalic\2\1\0\6\vstyles\0\22custom_highlights\0\19custom_palette\0\ngamma\3\1\20terminal_colors\2\27transparent_background\2\0", "config", "tokyodark.nvim")
-time([[Config for tokyodark.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
 time([[Config for Comment.nvim]], false)
+-- Config for: tokyodark.nvim
+time([[Config for tokyodark.nvim]], true)
+try_loadstring("\27LJ\2\n\v\0\2\2\0\0\0\1L\0\2\0\v\0\1\1\0\0\0\1L\0\2\0•\3\1\0\4\0\18\0\0245\0\0\0005\1\2\0005\2\1\0=\2\3\0015\2\4\0=\2\5\0015\2\6\0=\2\a\0014\2\0\0=\2\b\0014\2\0\0=\2\t\1=\1\n\0003\1\v\0=\1\f\0003\1\r\0=\1\14\0006\1\15\0'\3\16\0B\1\2\0029\1\17\1\18\3\0\0B\1\2\1K\0\1\0\nsetup\14tokyodark\frequire\19custom_palette\0\22custom_highlights\0\vstyles\14variables\14functions\16identifiers\1\0\1\vitalic\2\rkeywords\1\0\1\vitalic\2\rcomments\1\0\5\rcomments\0\rkeywords\0\16identifiers\0\14functions\0\14variables\0\1\0\1\vitalic\2\1\0\6\vstyles\0\22custom_highlights\0\19custom_palette\0\ngamma\3\1\20terminal_colors\2\27transparent_background\2\0", "config", "tokyodark.nvim")
+time([[Config for tokyodark.nvim]], false)
+-- Config for: flow.nvim
+time([[Config for flow.nvim]], true)
+try_loadstring("\27LJ\2\nt\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\16transparent\2\tmode\vnormal\15fluo_color\tpink\21aggressive_spell\1\nsetup\tflow\frequire\0", "config", "flow.nvim")
+time([[Config for flow.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au InsertEnter * ++once lua require("packer.load")({'nvim-autopairs'}, { event = "InsertEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
+vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

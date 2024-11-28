@@ -5,7 +5,6 @@ function factorial(n) {
         return n * factorial(n - 1);
     }
 }
-
 // Example of a basic for loop
 for (let i = 0; i < 5; i++) {
     console.log(`Factorial of ${i} is ${factorial(i)}`);
